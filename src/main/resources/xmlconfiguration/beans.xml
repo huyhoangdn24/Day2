@@ -4,8 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- bean definitions here -->
-    <bean id = "accountRepository" class = "pojobeans.AccountRepositoryImpl"/>
-    <bean id = "accountService" class = "pojobeans.AccountServiceImpl">
+    <bean id = "accountRepository" class = "org.example.pojo.AccountRepositoryImpl"/>
+    <bean id = "accountService" class = "org.example.pojo.AccountServiceImpl">
         <property name="accountRepository" ref="accountRepository"/>
     </bean>
 </beans>
