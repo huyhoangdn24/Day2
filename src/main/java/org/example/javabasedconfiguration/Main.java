@@ -7,8 +7,6 @@ public class Main {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(BasedConfiguration.class);
         AccountService accountService = applicationContext.getBean(AccountService.class);
-
-        System.out.println("AccountService");
         System.out.println("Before money transfer");
         System.out.println("Account 1 balance: " + accountService.getAccount(1).getBalance());
         System.out.println("Account 2 balance: " + accountService.getAccount(2).getBalance());
@@ -18,6 +16,6 @@ public class Main {
         System.out.println("Account 1 balance: " + accountService.getAccount(1).getBalance());
         System.out.println("Account 2 balance: " + accountService.getAccount(2).getBalance());
 
-        applicationContext.close();
+      
     }
 }
