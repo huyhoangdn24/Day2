@@ -7,11 +7,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 @Service("accountService")
 public class AccountService2Impl implements AccountService  {
+    @Autowired
+        private  AccountRepository accountRepository;
 
-        private final AccountRepository accountRepository;
 
-        @Autowired
         public AccountService2Impl(AccountRepository accountRepository) {
+
             this.accountRepository = accountRepository;
         }
 
